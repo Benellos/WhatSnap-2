@@ -90,24 +90,22 @@ $stable:                          #f8f8f8 !default;
 #whatSnapWelcome{
   font-size: 50px;
 }
-.whatSnap-Camera{
-
+#target{
+  height: 70px;
+  padding-left: 17%;
 }
 .messages{
-  background-color: #3498db;
+  background-color: #bdc3c7;
   padding: 5px;
-  margin-top: 15%;
-  border-radius: 20px;
-}
-.image{
-  width: 100px;
-  padding-left: 60px;
+  margin-top: 50%;
+  border-radius: 47px;
+  height: 110px;
+  width: 110px;
 }
 .time{
   font-style: italic;
   font-size: 85%;
-  margin-left: 22%;
-  margin-top: 37%;
+  text-align: center;
 }
 //This will change
 .messages.other {

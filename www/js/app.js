@@ -7,20 +7,6 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'chatModule', 'ngCordova'])
 
-.controller("WhatSnapController", function($scope, $cordovaBarcodeScanner) {
-
-    $scope.scanBarcode = function() {
-      console.log("barcode");
-        $cordovaBarcodeScanner.scan().then(function(imageData) {
-            alert(imageData.text);
-            console.log("Barcode Format -> " + imageData.format);
-            console.log("Cancelled -> " + imageData.cancelled);
-        }, function(error) {
-            console.log("An error happened -> " + error);
-        });
-    };
-
-})
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

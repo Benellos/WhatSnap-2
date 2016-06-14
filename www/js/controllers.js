@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ngCordova'])
 
 
 .controller('DashCtrl', function($scope) {
@@ -8,7 +8,18 @@ angular.module('starter.controllers', [])
     fadeTitleIn();
   });
 })
-.controller('KontakteCtrl', function($scope, $ionicPopup) {
+.controller('KontakteCtrl', function($scope, $ionicPopup,  $cordovaBarcodeScanner) {
+
+  $scope.scanBarcode = function() {
+    console.log("barcode");
+      $cordovaBarcodeScanner.scan().then(function(imageData) {
+          alert(imageData.text);
+          console.log("Barcode Format -> " + imageData.format);
+          console.log("Cancelled -> " + imageData.cancelled);
+      }, function(error) {
+          console.log("An error happened -> " + error);
+      });
+  };
   $scope.showConfirmContact = function() {
 
          var confirmPopup = $ionicPopup.confirm({
@@ -20,6 +31,9 @@ angular.module('starter.controllers', [])
 
          confirmPopup.then(function(res) {
             if(res) {
+                scanBarcode();
+                console.log("ja");
+
             } else {
                console.log('Show');
             }
@@ -27,7 +41,6 @@ angular.module('starter.controllers', [])
 
       };
 })
-
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.

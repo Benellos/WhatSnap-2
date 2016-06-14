@@ -15,5 +15,5 @@ function fadeTitleIn(){
 }
 //Chat Animation
 function fadeMessageIn(){
-  $( ".whatSnapMessage" ).fadeIn( "fast" );
+  $( "#stego" ).fadeIn( "fast" );
 }

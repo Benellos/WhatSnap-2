@@ -72,7 +72,7 @@ Cover.prototype.config = {
             var delimiter = new Array(threshold*3);
             for(var i = 0; i < delimiter.length; i+=1)
               delimiter[i] = 255;
-            
+
             return delimiter;
           },
   "messageCompleted": function(data, i, threshold) {
@@ -189,7 +189,7 @@ Cover.prototype.encode = function(message, image, options) {
     }
     for(i=offset*4; i<(offset+qS.length)*4 && i<data.length; i+=4)
       data[i+3] = qS[(i/4)%threshold];
-    
+
     subOffset = qS.length;
   }
   // Write message-delimiter
@@ -210,16 +210,16 @@ Cover.prototype.decode = function(image, options) {
 
   options = options || {};
   var config = this.config;
-  
+
   var t = options.t || config.t,
     threshold = options.threshold || config.threshold,
     codeUnitSize = options.codeUnitSize || config.codeUnitSize,
     prime = util.findNextPrime(Math.pow(2, t)),
-    args = options.args || config.args, 
+    args = options.args || config.args,
     messageCompleted = options.messageCompleted || config.messageCompleted;
 
   if(!t || t < 1 || t > 7) throw "Error: Parameter t = " + t + " is not valid: 0 < t < 8";
-    
+
   var shadowCanvas = document.createElement('canvas'),
     shadowCtx = shadowCanvas.getContext('2d');
 

@@ -43,7 +43,7 @@ angular.module('chatModule', ['ionic', 'ngCordova'])
 })
 
 
-.controller('Messages', ['$scope', '$timeout', '$ionicScrollDelegate', '$cordovaImagePicker',function($scope, $timeout, $ionicScrollDelegate, $cordovaImagePicker) {
+.controller('Messages', ['$scope', '$timeout', '$ionicScrollDelegate', '$cordovaImagePicker',function($scope, $timeout, $ionicScrollDelegate, $cordovaImagePicker, $ionicPopup) {
   $scope.hideTime = true;
 
   var alternate,
@@ -51,7 +51,6 @@ angular.module('chatModule', ['ionic', 'ngCordova'])
 
   $scope.sendMessage = function() {
     alternate = !alternate;
-
     var d = new Date();
     d = d.toLocaleTimeString().replace(/:\d+ /, ' ');
 
@@ -62,8 +61,22 @@ angular.module('chatModule', ['ionic', 'ngCordova'])
         time: d,
         picture: '../img/test.png'
       };
-      $scope.isMessage =true;
+      
+      $(".messages").fadeIn("slow");
+      $scope.isMessage = true;
 
+    } else {
+      function showAlert() {
+        var alertPopup = $ionicPopup.alert({
+          title: 'Keine Nachricht eingegeben!',
+          template: 'Gib eine Nachricht vor dem Senden ein.'
+        });
+
+        alertPopup.then(function(res) {
+          console.log('Thank you for not eating my delicious ice cream cone');
+        });
+      };
+      showAlert();
     }
   $scope.hide("../img/test.png",$scope.data.message);
 
@@ -108,11 +121,11 @@ angular.module('chatModule', ['ionic', 'ngCordova'])
 
   $scope.isMessage = false;
 
-  $scope.hide= function(img,message) {
+  $scope.hide= function(img, message) {
   			var stego = document.getElementById("stego");
-  			var 	target = document.getElementById("target");
-        console.log(img, message);
+  			var target = document.getElementById("target");
   				target.src = steg.encode(message, img, {"width": 200, "height": 200});
+          console.log("d")
 //			stego.className = "half";
   		//		message.innerHTML="";
   		//		message.parentNode.className="invisible";

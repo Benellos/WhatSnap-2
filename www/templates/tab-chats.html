@@ -1,26 +1,25 @@
 <div style="height: 100%; background-color:white;">
   <ion-content>
   <div id="stego" class="half">
-    <div ng-show="isMessage" class="messages">
+    <center><div ng-show="isMessage" style="display: none;" class="messages">
         <div class="image">
           	<img id="target" src=""/>
         </div>
-       <div class="time">{{message.time}}</div>
-
-    </div>
+    </div></center>
+     <!-- <div class="time">{{message.time}}</div> -->
 	</div>
   </ion-content>
 <div style="position: absolute; bottom: 50px; width: 100%">
    <ion-footer-bar keyboard-attach class="bar-stable item-input-inset">
     <!-- <button class="whatSnap-Camera ion-camera button-fab" ng-click="getImageSaveContact()"></button> -->
-    <button side="left" style="color: black;width: 20%" class="button button-clear whatSnap-Send" ng-click="read()">
-         read
+    <button side="left" style="color: black;width: 20%" class="button button-clear whatSnap-Read" ng-click="read()">
+         Lesen
        </button>
    <label class="item-input-wrapper" style="width: 100%">
-     <input class ="chatInput" style="width: 79%" type="text" placeholder="Type your message" on-return="sendMessage(); closeKeyboard()" ng-model="data.message" on-focus="inputUp()" on-blur="inputDown()" />
-</label>
-     <button side="left" style="color: black;width: 20%" class="button button-clear whatSnap-Send" ng-click="sendMessage()">
-          Send
+     <input class ="chatInput" style="width: 79%" type="text" placeholder="Nachricht" on-return="sendMessage(); closeKeyboard()" ng-model="data.message" on-focus="inputUp()" on-blur="inputDown()" />
+   </label>
+     <button side="right" style="color: black;width: 25%" class="button button-clear whatSnap-Send" ng-click="sendMessage()">
+          Senden
         </button>
 
 
