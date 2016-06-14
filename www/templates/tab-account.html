@@ -1,0 +1,37 @@
+<ion-view view-title="Profil">
+  <ion-content>
+    <ion-list>
+      <!-- Profile Setting -->
+  <div id="profilInformations" class="item item-divider">
+  <a style="color: black !important;font-weight: bold;">Profilinformationen</a>
+<center>
+  <img id="whatSnapProfilbild" class="item-custom item item-thumbnail" src="../img/ben.png" style="border-radius:50%;"height="120px;" />
+</center>
+    <label class="item item-input">
+  <span class="input-label">Name</span>
+  <input type="text" placeholder="Fernando Di Matteo">
+</label>
+<label class="item item-input">
+  <span class="input-label">Status</span>
+  <input type="text"placeholder="in the city">
+</label>
+<button class="button button-full button-positive" ng-click="showConfirm()">
+  Speichern
+</button>
+</a>
+  </div>
+
+  <!-- Optional Settings -->
+    <div id="settings" class="item item-divider">
+  <a style="color: black !important;font-weight: bold;">Einstellungen</a>
+    <ion-toggle  ng-model="settings.enableFriends">
+        Freunde aktivieren
+    </ion-toggle>
+    <ion-toggle  toggle-class="toggle-assertive" ng-model="settings.enableEncryption">
+        Verschlüsselung aktivieren
+    </ion-toggle>
+  </a>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>
