@@ -1,4 +1,4 @@
-angular.module('chatModule', ['ionic', 'ngCordova', 'starter'])
+angular.module('chatModule', ['ionic', 'ngCordova'])
 
 // All this does is allow the message
 // to be sent when you tap return
@@ -50,21 +50,22 @@ angular.module('chatModule', ['ionic', 'ngCordova', 'starter'])
     isIOS = ionic.Platform.isWebView() && ionic.Platform.isIOS();
 
   $scope.sendMessage = function() {
-    console.log("Nachricht gesendet!");
     alternate = !alternate;
 
     var d = new Date();
     d = d.toLocaleTimeString().replace(/:\d+ /, ' ');
 
-    if($scope.data.message != null){
-      $scope.messages.push({
+  if($scope.data.message != null){
+      $scope.message = {
         userId: alternate ? '12345' : '54321',
         text: $scope.data.message,
         time: d,
         picture: '../img/test.png'
-      });
-    }
+      };
+      $scope.isMessage =true;
 
+    }
+  $scope.hide("../img/test.png",$scope.data.message);
 
     delete $scope.data.message;
     $ionicScrollDelegate.scrollBottom(true);
@@ -104,6 +105,27 @@ angular.module('chatModule', ['ionic', 'ngCordova', 'starter'])
   $scope.closeKeyboard = function() {
     // cordova.plugins.Keyboard.close();
   };
+
+  $scope.isMessage = false;
+
+  $scope.hide= function(img,message) {
+  			var stego = document.getElementById("stego");
+  			var 	target = document.getElementById("target");
+        console.log(img, message);
+  				target.src = steg.encode(message, img, {"width": 200, "height": 200});
+//			stego.className = "half";
+  		//		message.innerHTML="";
+  		//		message.parentNode.className="invisible";
+
+  			//download.href=cover.src.replace("image/png", "image/octet-stream");
+
+  		}
+
+  	$scope.read=	function() {
+  			var target=document.getElementById("target");
+  				$scope.data.message = steg.decode(target);
+  		}
+
 
 
   $scope.data = {};

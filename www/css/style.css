@@ -3,6 +3,9 @@ $stable:                          #f8f8f8 !default;
 .scroll {
   padding: 10px 0 50px !important;
 }
+.invisible {
+				visibility:hidden;
+			}
 .messages {
   display: -webkit-box !important;
   display: -moz-box !important;
@@ -70,6 +73,7 @@ $stable:                          #f8f8f8 !default;
 #plusButton{
   position: relative;
   color: white;
+  margin-bottom: 0px;
 }
 #commentTitle{
     font-style:italic;
