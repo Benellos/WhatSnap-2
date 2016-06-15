@@ -47,6 +47,9 @@ angular.module('starter.controllers', ['ngCordova'])
 .controller('GroupsCtrl', function($scope) {
 
 })
+.controller('WeltCtrl', function($scope) {
+
+})
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);

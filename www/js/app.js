@@ -65,6 +65,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   })
+  .state('tab.welt', {
+    url: '/welt',
+    views: {
+      'tab-welt': {
+        templateUrl: 'templates/tab-welt.html',
+        controller: 'WeltCtrl'
+      }
+    }
+  })
   .state('tab.chats', {
       url: '/chats',
       views: {
