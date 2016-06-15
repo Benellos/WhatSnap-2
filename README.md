@@ -1,7 +1,11 @@
 # WhatSnap 2.0
 
-### INFO:###
+### INFO ###
 Ideen bitte an ideas@whatsnap.online !
+
+
+## WhatSnap 2 ##
+
 
 Nach WhatSnap wollten viele eine zweite, verbessete Variante....
 Hier wird im laufe der Zeit WhatSnap 2.0 öffentlich gemacht.
