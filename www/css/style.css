@@ -92,21 +92,6 @@ $stable:                          #f8f8f8 !default;
   width: 50%;
 
 }
-#commentTitle{
-    font-style:italic;
-    font-size: 90%;
-    text-align: center;
-}
-#whatSnapLogo{
-  margin-top: 8%;
-}
-#whatSnapTitle{
-  text-align: center;
-  font-size: 50px;
-}
-#whatSnapWelcome{
-  font-size: 50px;
-}
 #target{
   height: 70px;
   padding-left: 17%;
@@ -128,7 +113,6 @@ $stable:                          #f8f8f8 !default;
   font-size: 85%;
   text-align: center;
 }
-//This will change
 .messages.other {
   .message {
     -webkit-transform: translate3d(0, 0, 0) !important;

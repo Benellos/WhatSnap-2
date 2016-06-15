@@ -1,11 +1,6 @@
 angular.module('starter.controllers', ['ngCordova'])
 
 
-.controller('DashCtrl', function($scope) {
-  var scope = this;
-  scope.hidden = false;
-  fadeTitleIn();
-})
 .controller('KontakteCtrl', function($scope, $ionicPopup,  $cordovaBarcodeScanner) {
 
   $scope.showConfirmContact = function() {
@@ -51,9 +46,6 @@ angular.module('starter.controllers', ['ngCordova'])
 
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
-})
 
 .controller('AccountCtrl', function($scope, $ionicPopup) {
   $scope.settings = {
