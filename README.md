@@ -16,7 +16,7 @@ Folgende Features wird es (hoffentlich) haben:
 ![alt tag](https://i.gyazo.com/d80ca2dc25b198fe76fad441a25e72d2.png)
 
 ### Responsive & Moderne Kontaktliste ###
-![alt tag](https://i.gyazo.com/c78949a3aa7161d507b92c583cb64d54.png
+![alt tag](https://i.gyazo.com/c78949a3aa7161d507b92c583cb64d54.png)
 
 ### Editierbare Profilinformationen ###
 ![alt tag](https://i.gyazo.com/77ec787ccb1eee0db8f6edc6fd1fb88c.png)
