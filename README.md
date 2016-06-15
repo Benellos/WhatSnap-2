@@ -10,3 +10,7 @@ Folgende Features wird es (hoffentlich) haben:
  - Datenbank
  - Appstore / Android Market Eintrag
  
+Lizenz: GNU AGPLv3
+Außerdem muss vor der Implementation des Codes von diesem Projekt,
+vorher um Erlaubnis gebeten werden. Außer es wird ausdrücklich erwähnt,
+dass man es ohne Erlaubnis einbinden kann.
