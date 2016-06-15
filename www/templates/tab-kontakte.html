@@ -1,8 +1,12 @@
 <ion-view view-title="Kontakte">
 
-  <ion-content ng-controller="WhatSnapController">
+  <ion-content ng-controller="KontakteCtrl">
     <!-- Add Button -->
-    <center><button id="plusButton" class="button button-full button-small button-balanced ion-plus" ng-click="showConfirmContact();"></center>
+    <center>
+      <div class="addRemove">
+      <button id="minusButton" class="button button-full button-small button-left button-balanced ion-minus" ng-click="showConfirmContact();">
+      <button id="plusButton" class="button button-full button-small button-right button-balanced ion-plus" ng-click="showConfirmContact();"></center>
+      </div>
     <ion-list>
       <!-- Contact List Divider -->
       <div id="A" class="item item-divider" style="display: none;">

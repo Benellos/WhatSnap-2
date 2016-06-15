@@ -4,22 +4,10 @@ angular.module('starter.controllers', ['ngCordova'])
 .controller('DashCtrl', function($scope) {
   var scope = this;
   scope.hidden = false;
-  $scope.$on('$ionicView.enter', function(e) {
-    fadeTitleIn();
-  });
+  fadeTitleIn();
 })
 .controller('KontakteCtrl', function($scope, $ionicPopup,  $cordovaBarcodeScanner) {
 
-  $scope.scanBarcode = function() {
-    console.log("barcode");
-      $cordovaBarcodeScanner.scan().then(function(imageData) {
-          alert(imageData.text);
-          console.log("Barcode Format -> " + imageData.format);
-          console.log("Cancelled -> " + imageData.cancelled);
-      }, function(error) {
-          console.log("An error happened -> " + error);
-      });
-  };
   $scope.showConfirmContact = function() {
 
          var confirmPopup = $ionicPopup.confirm({
@@ -31,9 +19,11 @@ angular.module('starter.controllers', ['ngCordova'])
 
          confirmPopup.then(function(res) {
             if(res) {
-                scanBarcode();
-                console.log("ja");
-
+              $cordovaBarcodeScanner.scan().then(function(imageData) {
+                  alert(imageData.text);
+              }, function(error) {
+                  console.log("An error happened -> " + error);
+              });
             } else {
                console.log('Show');
             }
@@ -53,6 +43,9 @@ angular.module('starter.controllers', ['ngCordova'])
   $scope.remove = function(chat) {
     Chats.remove(chat);
   };
+})
+.controller('GroupsCtrl', function($scope) {
+
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {

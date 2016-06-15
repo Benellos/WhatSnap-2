@@ -13,7 +13,18 @@ function fadeTitleIn(){
         }
     )
 }
-//Chat Animation
-function fadeMessageIn(){
-  $( "#stego" ).fadeIn( "fast" );
+
+function fadeTitleOut(){
+  $( "#whatSnapTitle" ).fadeOut( "slow",
+    function ()
+      {
+  $( "#commentTitle" ).fadeOut("slow", function(){
+    $("#whatSnapWelcome").fadeIn("slow", function(){
+      $("#whatSnapLogo").fadeOut("fast", function(){
+        $(".startText").fadeIn("slow");
+      });
+    });
+  });
+      }
+  )
 }

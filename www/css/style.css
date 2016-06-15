@@ -74,6 +74,23 @@ $stable:                          #f8f8f8 !default;
   position: relative;
   color: white;
   margin-bottom: 0px;
+  float: left;
+  display:inline-block;
+  width: 50%;
+
+}
+.addRemove{
+  text-align: center;
+}
+#minusButton{
+  position: relative;
+  color: white;
+  background-color: #e74c3c;
+  margin-bottom: 0px;
+  float: left;
+  display:inline-block;
+  width: 50%;
+
 }
 #commentTitle{
     font-style:italic;
@@ -100,7 +117,11 @@ $stable:                          #f8f8f8 !default;
   margin-top: 50%;
   border-radius: 47px;
   height: 110px;
-  width: 110px;
+  width: 108px;
+}
+.startText{
+
+  padding-top: 2px;
 }
 .time{
   font-style: italic;

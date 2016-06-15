@@ -61,7 +61,7 @@ angular.module('chatModule', ['ionic', 'ngCordova'])
         time: d,
         picture: '../img/test.png'
       };
-      
+
       $(".messages").fadeIn("slow");
       $scope.isMessage = true;
 
@@ -125,7 +125,6 @@ angular.module('chatModule', ['ionic', 'ngCordova'])
   			var stego = document.getElementById("stego");
   			var target = document.getElementById("target");
   				target.src = steg.encode(message, img, {"width": 200, "height": 200});
-          console.log("d")
 //			stego.className = "half";
   		//		message.innerHTML="";
   		//		message.parentNode.className="invisible";
